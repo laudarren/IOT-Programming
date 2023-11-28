@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Smart Home System</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/fed9556615.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo"><i class="fa-solid fa-house"></i>&nbsp;Smart&nbsp;Home</h2>
+        </div>
+        <div class="menu">
+            <ul>
+                <!-- <li><a href="#" style="background-color: #00ADB5;">Hompage</a></li> -->
+                <li><a href="#"><i class="fa-solid fa-door-open"></i> Door</a></li>
+                <li><a href="#"><i class="fa-solid fa-seedling"></i>Gardening</a></li>
+                <li><a href="#"><i class="fa-solid fa-dog"></i> Pet</a></li>
+                <li><a href="#"><i class="fa-regular fa-lightbulb"></i> Light</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <h2 style="margin-left: 2%;">Welcome, Home!</h2>
+
+    <div class="container">
+        <div class="box">
+            <h2>Line Graph </h2>
+
+                <canvas id="myChart" style="width:80%;max-width:550px"></canvas>
+            
+            <p>Average Data</p>
+        </div>
+        
+
+        <div class="box" id="temperatureBox">
+            <h2>Temperature <i class="fa-solid fa-temperature-three-quarters"></i></h2>
+            <div class="dial-container">
+                <div class="dial" id="temperatureDial"></div>
+                <div class="hand" id="temperatureHand"></div>
+            </div>
+            <p id="temperatureValue">Loading...</p>
+        </div>
+        
+        <div class="box" id="humidityBox">
+            <h2>Humidity <i class="fa-solid fa-droplet"></i></h2>
+            <div class="humidity-container">
+                <div class="dial" id="humidityDial"></div>
+                <div class="humidity-hand" id="humidityHand"></div>
+            </div>
+            <p id="humidityValue">Loading...</p>
+        </div>
+        
+        <div class="box" id="timeBox" >
+            <h2>Time</h2>
+            <div class="clock">
+                <div class="clock-range"></div>
+                <div class="clock-numbers">
+                    <!-- Add clock numbers dynamically using JavaScript -->
+                </div>
+                <div class="clock-hand hour-hand" id="hourHand"></div>
+                <div class="clock-hand minute-hand" id="minuteHand"></div>
+                <div class="clock-hand second-hand" id="secondHand"></div>
+            </div>
+            <p id="timeValue">Loading...</p>
+        </div>
+    </div>
+    
+</body>
+</html>
+
