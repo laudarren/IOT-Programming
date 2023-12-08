@@ -1,0 +1,279 @@
+body{
+    margin: 0;
+    padding:0;
+    font-family: Arial, sans-serif;
+    background-color: #EEEEEE;
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    background: #222831;
+    color:#fff;
+    top: 0;
+    border-bottom: 1px #F4DFC8;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 30px 30px;
+}
+
+/* FoodEdge icon div inside the navigation bar */
+.icon {
+    width: 300px;
+    height: 100px;
+    float: left;
+    margin-left: 2%;
+    margin-top: -0.3%;
+}
+
+/* FoodEdge logo h2 inside the navigation bar */
+.logo {
+    font-size: 40px;
+}
+
+/* Menu list div inside the naviagtion bar */
+.menu {
+    width: 750px;
+    height: 100px;
+    float: right;
+    margin-top: -0.7%;
+}
+
+.menu ul{
+    width: 100%;
+    margin-left: -24%;
+    
+}
+
+.menu ul li {
+    list-style: none;
+    font-size: 23px;
+    float: left;
+    position: relative;
+    left: 35%;
+    margin-top: 35px;
+    margin-right: 8%;
+}
+
+.menu ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+}
+
+.menu ul li a:hover {
+    
+    text-decoration: underline;
+}
+
+.container{
+    position:absolute;
+    left:5%;
+}
+
+.box {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 15px;
+    background-color: #fff;
+    
+}
+
+.box h2{
+    color: #868686;
+}
+
+.indicator {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+}
+.clock {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px;
+}
+.clock-hand {
+    position: absolute;
+    height: 2px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 100%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.hour-hand {
+    width: 25%;
+    animation: rotateClockHour 12h infinite steps(360);
+}
+.minute-hand {
+    width: 40%;
+    animation: rotateClockMinute 60min infinite steps(360);
+}
+.second-hand {
+    width: 48%;
+    animation: rotateClockSecond 60s infinite steps(360);
+}
+.clock-range {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    box-sizing: border-box;
+    z-index: 0;
+    left:-5%;
+    bottom: -4.5%;
+}
+.clock-numbers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.number {
+    position: absolute;
+    font-size: 12px;
+    font-weight: bold;
+    transform-origin: 50% 100%;
+}
+@keyframes rotateClockHour {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotateClockMinute {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotateClockSecond {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.dial-container {
+position: relative;
+width: 300px;
+height: 150px;
+background-color: #fff;
+border-radius: 150px 150px 0 0;
+overflow: hidden;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hand {
+position: absolute;
+bottom: 0%;
+left: 50%;
+width: 2px;
+height: 70%;
+background-color: #e74c3c;
+transform-origin: 50% 100%;
+transform: translateX(-50%) rotate(0deg);
+transition: transform 0.5s ease;
+}
+
+.temperature-label {
+position: absolute;
+top: 10px;
+left: 50%;
+transform: translateX(-50%);
+font-family: Arial, sans-serif;
+font-size: 14px;
+color: #333;
+}
+
+.humidity-container {
+position: relative;
+width: 300px;
+height: 150px;
+background-color: #fff;
+border-radius: 150px 150px 0 0;
+overflow: hidden;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.humidity-hand {
+position: absolute;
+bottom: 0%;
+left: 50%;
+width: 2px;
+height: 70%;
+background-color: #3498db;
+transform-origin: 50% 100%;
+transform: translateX(-50%) rotate(0deg);
+transition: transform 0.5s ease;
+}
+
+.humidity-label {
+position: absolute;
+top: 10px;
+left: 50%;
+transform: translateX(-50%);
+font-family: Arial, sans-serif;
+font-size: 14px;
+color: #333;
+}
+
+#temperatureBox:hover .fa-temperature-three-quarters{
+    animation: bounce 0.8s infinite;
+}
+
+#humidityBox:hover .fa-droplet {
+    animation: bounce 0.8s infinite;
+}
+
+@keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .control {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.control-sub{
+    background-color: #222831;
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff; /* Text color for default state */
+    border: 2px solid rgb(170, 255, 255);
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.control-sub:hover {
+    background-color: #00ADB5; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+}

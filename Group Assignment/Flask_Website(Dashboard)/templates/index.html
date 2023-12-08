@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Smart Home System</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='index.css')}}"/>
+    <script src="{{url_for('static',filename='index.js')}}"></script>
+    <script src="https://kit.fontawesome.com/fed9556615.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo"><i class="fa-solid fa-house"></i>&nbsp;Smart&nbsp;Home</h2>
+        </div>
+        <div class="menu">
+            <ul>
+                <!-- <li><a href="#" style="background-color: #00ADB5;">Hompage</a></li> -->
+                <li><a href="#"><i class="fa-solid fa-door-open"></i> Door</a></li>
+                <li><a href="#"><i class="fa-solid fa-seedling"></i>Gardening</a></li>
+                <li><a href="#"><i class="fa-solid fa-dog"></i> Pet</a></li>
+                <li><a href="#"><i class="fa-regular fa-lightbulb"></i> Light</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <h2 style="margin-left: 2%;">Welcome, Home!</h2>
+
+        <h2> Commands </h2> 
+        <div class = "box">
+            <h2>Field</h2>
+            <h3> Field 1 Grass: <a href="/action1" class="control-sub" > CUT </a>
+            <h3> Field 2 Grass: <a href="/action2" class="control-sub"> CUT </a> 
+            <h3> Field 1 Water: <a href="/action3" class="control-sub"> TURN ON </a> 
+            <h3> Field 2 Water: <a href="/action4" class="control-sub"> TURN ON </a>
+            <h3> Field 1 Water: <a href="/action13" class="control-sub"> TURN OFF </a> 
+            <h3> Field 2 Water: <a href="/action14" class="control-sub"> TURN OFF </a>
+        </div>
+        <div class = "box">
+            <h2>Door</h2>
+            <h3> Action 1: <a href="/action5" class="control-sub"> Unlock </a> 
+            <h3> Action 2: <a href="/action6" class="control-sub"> Lock </a>
+        </div>
+        <div class = "box">
+            <h2>Lighting</h2>
+            <h3> Action 1: <a href="/action7" class="control-sub"> On All </a> 
+            <h3> Action 2: <a href="/action8" class="control-sub"> Off All </a>
+            <h3> Action 3: <a href="/action9" class="control-sub"> On One </a> 
+            <h3> Action 4: <a href="/action10" class="control-sub"> Off One </a>
+        </div>
+        <div class = "box">
+            <h2>Pet</h2>
+            <h3> Action 1: <a href="/action11" class="control-sub"> Turn On </a> 
+            <h3> Action 2: <a href="/action12" class="control-sub"> Turn Off </a>
+        </div>
+        
+        
+        
+
+    </div>
+
+    <!-- <div class="container">
+        <div class="box">
+            
+        </div>
+
+    </div> -->
+    
+</body>
+</html>
+
